@@ -12,7 +12,7 @@ set :deploy_to, '/data/ic/rampup'
 
 # Default value for :scm is :git
 set :scm, :git
-set :branch, "origin/branching_test"
+set :branch, "origin branching_test"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 set :user, "reactor"
