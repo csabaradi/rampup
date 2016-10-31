@@ -1,0 +1,678 @@
+# Logfile created on 2016-10-31 16:47:01 +0200 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:47:01 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:47:16 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:47:29 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8148f54a] Running /usr/bin/env mkdir -p /tmp on 64.15.185.105
+ DEBUG [8148f54a] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:48:14 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [01da5d8a] Running /usr/bin/env mkdir -p /tmp on 64.15.185.105
+ DEBUG [01da5d8a] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:51:20 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bee6ec2f] Running /usr/bin/env mkdir -p /tmp as root@64.15.185.105
+ DEBUG [bee6ec2f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bee6ec2f] Finished in 2.452 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [e350cc62] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as root@64.15.185.105
+ DEBUG [e350cc62] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [e350cc62] Finished in 0.539 seconds with exit status 0 (successful).
+  INFO [67eeccfb] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as root@64.15.185.105
+ DEBUG [67eeccfb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [67eeccfb] 	Error reading response length from authentication socket.
+ DEBUG [67eeccfb] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [67eeccfb] Finished in 4.212 seconds with exit status 0 (successful).
+  INFO [cd4f507e] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as root@64.15.185.105
+ DEBUG [cd4f507e] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [cd4f507e] Finished in 0.513 seconds with exit status 0 (successful).
+ DEBUG [8d7f1555] Running [ -f /data/ic/rampup/current/REVISION ] as root@64.15.185.105
+ DEBUG [8d7f1555] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [8d7f1555] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [aa33d6b4] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as root@64.15.185.105
+ DEBUG [aa33d6b4] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [aa33d6b4] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [aa33d6b4] Finished in 0.507 seconds with exit status 0 (successful).
+ DEBUG [5b1fadd2] Running [ -f /data/ic/rampup/repo/HEAD ] as root@64.15.185.105
+ DEBUG [5b1fadd2] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [5b1fadd2] Finished in 0.509 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [c1d9ad3b] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as root@64.15.185.105
+ DEBUG [c1d9ad3b] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [c1d9ad3b] Finished in 0.518 seconds with exit status 0 (successful).
+  INFO [a05d2db0] Running /usr/bin/env git remote update --prune as root@64.15.185.105
+ DEBUG [a05d2db0] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a05d2db0] 	Fetching origin
+ DEBUG [a05d2db0] 	Error reading response length from authentication socket.
+  INFO [a05d2db0] Finished in 1.715 seconds with exit status 0 (successful).
+ DEBUG [00443b3e] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as root@64.15.185.105
+ DEBUG [00443b3e] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [00443b3e] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [104f0b81] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031145132 as root@64.15.185.105
+ DEBUG [104f0b81] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031145132 )
+  INFO [104f0b81] Finished in 0.537 seconds with exit status 0 (successful).
+  INFO [10e2d560] Running /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031145132 as root@64.15.185.105
+ DEBUG [10e2d560] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031145132 )
+  INFO [10e2d560] Finished in 0.545 seconds with exit status 0 (successful).
+ DEBUG [53d9843e] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as root@64.15.185.105
+ DEBUG [53d9843e] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [53d9843e] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [bbba9b4b] Running /usr/bin/env git rev-list --max-count=1 master as root@64.15.185.105
+ DEBUG [bbba9b4b] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [bbba9b4b] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [bbba9b4b] Finished in 0.534 seconds with exit status 0 (successful).
+ DEBUG [a40aaab0] Running if test ! -d /data/ic/rampup/releases/20161031145132; then echo "Directory does not exist '/data/ic/rampup/releases/20161031145132'" 1>&2; false; fi as root@64.15.185.105
+ DEBUG [a40aaab0] Command: if test ! -d /data/ic/rampup/releases/20161031145132; then echo "Directory does not exist '/data/ic/rampup/releases/20161031145132'" 1>&2; false; fi
+ DEBUG [a40aaab0] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [68d07ea9] Running /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION as root@64.15.185.105
+ DEBUG [68d07ea9] Command: cd /data/ic/rampup/releases/20161031145132 && /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION
+  INFO [68d07ea9] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [25abf287] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031145132 /data/ic/rampup/releases/current as root@64.15.185.105
+ DEBUG [25abf287] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031145132 /data/ic/rampup/releases/current
+  INFO [25abf287] Finished in 0.536 seconds with exit status 0 (successful).
+  INFO [ff851161] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as root@64.15.185.105
+ DEBUG [ff851161] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [ff851161] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [c27c7c45] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as root@64.15.185.105
+ DEBUG [c27c7c45] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [c27c7c45] 	20161027152525	20161028130548	20161028134839	20161031135532	20161031140848
+20161031145132
+ DEBUG [c27c7c45] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 64.15.185.105
+  INFO [7265d0cd] Running /usr/bin/env rm -rf /data/ic/rampup/releases/20161027152525 as root@64.15.185.105
+ DEBUG [7265d0cd] Command: /usr/bin/env rm -rf /data/ic/rampup/releases/20161027152525
+  INFO [7265d0cd] Finished in 0.518 seconds with exit status 0 (successful).
+ DEBUG [647db102] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as root@64.15.185.105
+ DEBUG [647db102] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [647db102] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [3fb1ea88] Running /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031145132 by razvan.lazea" >> /data/ic/rampup/revisions.log as root@64.15.185.105
+ DEBUG [3fb1ea88] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031145132 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [3fb1ea88] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 16:59:13 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:09:44 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [faa193a1] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [faa193a1] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:10:10 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2106902d] Running /usr/bin/env mkdir -p /tmp as root@localhost
+ DEBUG [2106902d] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:12:09 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [80c1b86d] Running /usr/bin/env mkdir -p /tmp as root@localhost
+ DEBUG [80c1b86d] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:13:36 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4487bb13] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [4487bb13] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4487bb13] Finished in 15.755 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [bb3adc9f] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh on localhost
+ DEBUG [bb3adc9f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [bb3adc9f] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [8affd899] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git on localhost
+ DEBUG [8affd899] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [8affd899] 	Error reading response length from authentication socket.
+ DEBUG [8affd899] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [8affd899] Finished in 1.709 seconds with exit status 0 (successful).
+  INFO [2f1076d4] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases on localhost
+ DEBUG [2f1076d4] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+ DEBUG [2f1076d4] 	mkdir: cannot create directory ‘/data/ic/rampup/shared’: Permission denied
+ DEBUG [2f1076d4] 	mkdir: cannot create directory ‘/data/ic/rampup/releases’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:18:31 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c3b581d2] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [c3b581d2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c3b581d2] Finished in 5.369 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [08b17aba] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh on localhost
+ DEBUG [08b17aba] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [08b17aba] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [417f822a] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git on localhost
+ DEBUG [417f822a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [417f822a] 	Error reading response length from authentication socket.
+ DEBUG [417f822a] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [417f822a] Finished in 1.481 seconds with exit status 0 (successful).
+  INFO [9c4f64fa] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases on localhost
+ DEBUG [9c4f64fa] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+ DEBUG [9c4f64fa] 	mkdir: cannot create directory ‘/data/ic/rampup/shared’
+ DEBUG [9c4f64fa] 	: Permission denied
+ DEBUG [9c4f64fa] 	mkdir: cannot create directory ‘/data/ic/rampup/releases’: Permission denied
+ DEBUG [9c4f64fa] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:25:28 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2d24d1b3] Running /usr/bin/env mkdir -p /tmp on localhost
+ DEBUG [2d24d1b3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2d24d1b3] Finished in 4.892 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [6a3e2876] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh on localhost
+ DEBUG [6a3e2876] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [6a3e2876] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [15c05eb4] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git on localhost
+ DEBUG [15c05eb4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [15c05eb4] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [15c05eb4] Finished in 1.570 seconds with exit status 0 (successful).
+  INFO [9cc275b0] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases on localhost
+ DEBUG [9cc275b0] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+ DEBUG [9cc275b0] 	mkdir: cannot create directory ‘/data/ic/rampup/shared’: Permission denied
+ DEBUG [9cc275b0] 	mkdir: cannot create directory ‘/data/ic/rampup/releases’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:40:25 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [365585cc] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [365585cc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8e18f78f] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [8e18f78f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [365585cc] Finished in 7.821 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [ecc32736] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh on 127.0.0.1
+ DEBUG [ecc32736] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [ecc32736] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:40:49 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [628b80de] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [628b80de] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cdd441ce] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [cdd441ce] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:48:21 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7a4582f4] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [7a4582f4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3553a1d8] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [3553a1d8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:52:49 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9c0443fe] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [9c0443fe] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:53:13 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:53:34 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a7b97a95] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [a7b97a95] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 17:59:30 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [682875fb] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [682875fb] Command: /usr/bin/env mkdir -p /tmp
+  INFO [682875fb] Finished in 4.002 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:04:29 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [85950f41] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [85950f41] Command: /usr/bin/env mkdir -p /tmp
+  INFO [85950f41] Finished in 2.456 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [c64b1ad4] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [c64b1ad4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [c64b1ad4] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [32de00ab] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [32de00ab] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [32de00ab] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [32de00ab] Finished in 1.484 seconds with exit status 0 (successful).
+  INFO [b7b6f8c3] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [b7b6f8c3] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [b7b6f8c3] Finished in 0.507 seconds with exit status 0 (successful).
+ DEBUG [9d4fa24f] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [9d4fa24f] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [9d4fa24f] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [dbd32cf5] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [dbd32cf5] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [dbd32cf5] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [dbd32cf5] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [7f616103] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [7f616103] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [7f616103] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [444bc5d6] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [444bc5d6] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [444bc5d6] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [d5f01f57] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [d5f01f57] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d5f01f57] 	Fetching origin
+  INFO [d5f01f57] Finished in 1.484 seconds with exit status 0 (successful).
+ DEBUG [904f098b] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [904f098b] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [904f098b] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [59e519c9] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031160439 as reactor@64.15.185.105
+ DEBUG [59e519c9] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031160439 )
+  INFO [59e519c9] Finished in 0.527 seconds with exit status 0 (successful).
+  INFO [f013af35] Running /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031160439 as reactor@64.15.185.105
+ DEBUG [f013af35] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031160439 )
+  INFO [f013af35] Finished in 0.533 seconds with exit status 0 (successful).
+ DEBUG [a66c4c9c] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [a66c4c9c] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [a66c4c9c] Finished in 0.501 seconds with exit status 0 (successful).
+ DEBUG [4ae22d2c] Running /usr/bin/env git rev-list --max-count=1 master as reactor@64.15.185.105
+ DEBUG [4ae22d2c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4ae22d2c] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [4ae22d2c] Finished in 0.522 seconds with exit status 0 (successful).
+ DEBUG [2b49807f] Running if test ! -d /data/ic/rampup/releases/20161031160439; then echo "Directory does not exist '/data/ic/rampup/releases/20161031160439'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [2b49807f] Command: if test ! -d /data/ic/rampup/releases/20161031160439; then echo "Directory does not exist '/data/ic/rampup/releases/20161031160439'" 1>&2; false; fi
+ DEBUG [2b49807f] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [e69f4096] Running /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION as reactor@64.15.185.105
+ DEBUG [e69f4096] Command: cd /data/ic/rampup/releases/20161031160439 && /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION
+  INFO [e69f4096] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [4d4df024] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031160439 /data/ic/rampup/releases/current as reactor@64.15.185.105
+ DEBUG [4d4df024] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031160439 /data/ic/rampup/releases/current
+  INFO [4d4df024] Finished in 0.510 seconds with exit status 0 (successful).
+  INFO [ad1c4cae] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@64.15.185.105
+ DEBUG [ad1c4cae] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [ad1c4cae] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [8a4eb05b] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [8a4eb05b] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [8a4eb05b] 	20161028134839	20161031135532	20161031140848	20161031145132	20161031160053
+20161031160439
+ DEBUG [8a4eb05b] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 64.15.185.105
+  INFO [306a0bc8] Running /usr/bin/env rm -rf /data/ic/rampup/releases/20161028134839 as reactor@64.15.185.105
+ DEBUG [306a0bc8] Command: /usr/bin/env rm -rf /data/ic/rampup/releases/20161028134839
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/application-672cc624f43ebe0dc2159cb987d4371b39ab56a9f242c5ee854d9435aa543a88.js.gz'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/application-672cc624f43ebe0dc2159cb987d4371b39ab56a9f242c5ee854d9435aa543a88.js'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/application-086c6004362adfb534f7c2257cf1f56b17d524404723a5ed45fc673d9bd61d45.css.gz'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/application-086c6004362adfb534f7c2257cf1f56b17d524404723a5ed45fc673d9bd61d45.css'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/.sprockets-manifest-493c266225b5bc67a29642f2346cfc0f.json'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/m8/m8RV6Jib53pxfhAQaiTgUFJpfYn-raiX_ujaG-cnyP0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/wF/wFdKDaXTiOXRYfEjhYa0fLi0Jfbzdtk6TK6kCyiN6Us.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/OA/OARHaNJKlJvL4duw1KPwWARwC5CItZjdIRVIiFzCTj8.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/dc/dcdSsWqzx9PyqMfi1XuoZSjFQ0AMlVaUC7Rm5-ojWvo.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/ib/ibQgi89ybWYsK0AhWncDhARtYvREo13147h2v1wEdvc.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/aL/aLDTv0xgetSC-W5xLHEx-9WmI_pzRvRHcrQKH4Z_DP0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/0o/0oKtTq2r0DWv_DYQjzrgNu1Ja6OJPbm8M-GW1zJq7ao.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/5n/5n9Ph3kvYRzlQwLY8WEBseTSTuiUlKB9CvePAw5Beq8.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Yi/YiFPbbiihq8_arebHMiSJGji-rcK-C5gPiNJJjqDLko.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/8t/8tvheWEr8iQGGXBEwpFBIuy0V_eIUFiL5W8SAkJ70Xw.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Q9/Q9qmS9P-4tfsEuMmeYQOUZZR9bDMEoB6mbXIgLq6vZ0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/qU/qULdlXFk7Vqmn2sAHNlzF2zrdsmCI6Y5uOhKswYswMk.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Xg/Xg1zlo4facknAM1Np62Rt6UvBYhWmJ9ALRtzw1WU4Ic.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/rR/rRpKlkq9FCyR0yf2D68T2RgWc4EKlZZLf_lE8iYFIrE.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/S8/S8AvzozTFs_0IPERDSzeiFrLWOd9I6UkPL01SngeFMg.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/_b/_bfom75fRh5ha_7xTgTTnKNh4hfxhEMin6je3W8XiRg.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/IY/IYMGevjFpznBSi1UNVDFUKAvMqRJ2SoVnSfTtdt5waU.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/tV/tVbbGrt8iWDK0A2SAe5k50L1VJlM0BuwJzr90LM3b-w.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/vy/vy_l4SbUOq_IDhPXKOIBKzKyn1Enrrc3PApY4kGQslA.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/0c/0cxvRhzL0tJWRDvqesDGJxgleTdYOh35gixuV4ZO1dM.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/w1/w1wyn6I_FCRbwqPKJo4Ac8yc3UN3chLk_YZhR_v77kM.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/vb/vbxSJ2xjjE_7fU6PDFRT-aHXqC3WFjInNS8kjvznfMk.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/5I/5IvNxlii7RrSU-6qUmpF60eSplTurAhs4HYPd99cQzw.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/1w/1wqOhhcE5d2DxlkN9DY5Geh_fl-eu51ldEsuncN7R8k.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Wd/Wd5eCQK0vq_wfuA0PqUPZEPTogRFt65QzIcgz22-umc.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/w2/w2H5lgqNdYzuvBZWt8cjwsLZUoB_jB7tWc8UhQfkyU4.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/TK/TKZfGfwiPsu7sKt5DOwxvSZtvIkkGH2gmrgXfN2b46Y.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/HZ/HZJ7rApcmjBgWQyFzsWitBkwFxIjk4E-XWzBpZ9ODj0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/vP/vPCQ-RTlTm0xX4-ppQsltVLDdQxQBqd3L3HyONY43rY.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/4_/4__fEMcg9sYkQt4CStXpnVZaNE7o8wxpYSZtSN0pzP4.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/QN/QNS_db1xAzKoXKja6iChzb-diHs9Tekh9Q3X3pQQ6wI.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/n1/n1rsZWg5rlP_lJAHZejgg5QIsG9TyGPV_lCvGTmvn98.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/w8/w888xX5FfqKkZMnJKFkN7xHpWQ2_T-IRIUNvzaOhS2s.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/YX/YXCthgoPL7-lkMp11h_1ymDbAGUG-NT3EfHXlxhxcQ0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/we/wewc0V_Z8S6ffeJkCNIgPeQ4ZqTpOnFRnP2Ioyhx1VA.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/KK/KKWD9_M7_NyJVPJKmruoXFyCBxQld_F024ob6EU7GeE.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/n6/n6QKPWm4iYKirhQdWJFdcZjb93IRDwpOP2YRSmVgiA0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/B3/B3qqgMixyrao1wJhPxeVgOw3ViqD5i-SKaWDUYB_d-o.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Yb/YbMOwOIO9F_HCeOVpDK-pwbhwjZAhmK2ZDkKgrvu9XM.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/sw/swKLolnSWV-DoiscEMB9ebNBctjxoTmKOpIhRt-oT44.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/g_/g_VJm30D619nptbqKZkebHVSLJfD7sVCURIFZNXqjbo.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Ya/YayMISAqD-Y3vBFywwKrXbUovGf5o77HUF5s8mnQgO0.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/iL/iL_4mkE-o6f99a3bS2AskEefZ-W06EOJKpR5v1E_NL4.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/BE/BEDkhhaIwVcjdWOTxYt3wl6rVnWskxPTxbng9-ma5RU.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/qc/qcYpLVXQJi8iaVb0v43MzzNlJ7APvHX6npp4eIpbUsk.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/gc/gc0bfRra2Vub4LuYRxxO_oIBnA6L7UqFdOQTFmN_hFs.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/gc/gcoEopYqLORVqUJpk19Njo6ZCj13oQJEzYTl2SlXjAI.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Lm/Lm3rkRLFtxCcNk0oYqsU7MH2NLYS7xrclyupdmf3z00.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Zh/ZhZDfhvFinM6TxcZLEOHnc74peH3jW5h-PMbJPV-2eI.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/DN/DN-hqQ7gmzJypWbVOVgUymcO6EJiHeOt_HI56ZHrs3Y.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/3v/3vlRoO23l7CAowZM7wd_ypgPo4dE7K27ksua4SFlw2o.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/A5/A5I7uPqvMB36sYqVHEZBAZuYqE8Q5AxiCGYi8yMA2cs.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/fo/fo5Tp0d7lkIo0PV40-mbWAOBRusjWc7nwrUDlttwcBM.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+ DEBUG [306a0bc8] 	rm: 
+ DEBUG [306a0bc8] 	cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/x7/x7PYh8DJvPykcEqpVab2vcY9-GFz-3cqtoMlRAu94Uc.cache'
+ DEBUG [306a0bc8] 	: Permission denied
+ DEBUG [306a0bc8] 	
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/tl/tlmjMuiPTm78nOkjXbM-gQauaBMDjmMBIL_CWvEDvto.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/5V/5VIvk6UHoTQ2UDhZ333ZbfFBucp9k6DhhPbFdlvsAG4.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/x0/x0LFm-iY3Y19HDnTxGjKZgdkK9bcSjwWW5Htyj__5oo.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Tn/TngKpIN6ipAG24aTqLC0guepXtApgMCLQ5quOUYAYt4.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Uy/UyGbB14GnIByY-vsKMkAaOxF5_dql_bomHgDUo6_DrU.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/YR/YR-Gj3THPHpI3UxI4dn4A7CWMJ8Nne_WCQ55OZku03I.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/J0/J0KZWwL4cUyN7m4_IR6qLc3oRR_BXUCMFA72O0h7Xso.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Bx/BxzoG0KxeNLac4xTNeJv3qfeytbNBw58xj2zD-xdbrE.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/aJ/aJDneXpecxunQU3brbvijw9CXRtjuqg3BqIFoMXRXlQ.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/C5/C5uyx0h5eRfY1TAw6xRdIkIFd-jv4KGXD1fWSkVzUJ4.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/sF/sFl5FmEaiQeW95kRovsXWV6Q97q84sM6y0w2cPSGt9E.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/79/79TAx2w2QHIXyow8c6C-3RdT-SJjBEyQa-hav7OwzeY.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/7Z/7ZnXescTh7jnfro6sUMSpssKbsaPMs86_GFnesQBpfs.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/IQ/IQG0bnZIcatMrjYdFJGQPWp-SYk04EJJodGpH-OCzRs.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/yv/yv1G0aFi6oDnDhZryLrhS9t30CYPQBU53aIgh0t84vg.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/c1/c1S8ejKv48Q4mTZ5CWzBYB5YgRAx3hVB2wD_EItNxBQ.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/nw/nwF44jIraUg0w4iP-ohhtBT6-KQ95mcqdLXx-lckBL8.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Gl/GlOQh43ifGm9pkjD6r-N4gCyxZclN93yHgcIB_IkXs4.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/0m/0m7YfFiaEzK7VlZuAeHL18lymCmkPtjzCiffmOCInzw.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/7f/7fNn1_appCFgOvF9Wkt-vRUmNv5Kv7bmv8vosP8LCuI.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/hS/hSiXcjHAIbmQFWIw3KX-2snNGrl9YhTjSpbxZIG1Hdo.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/HL/HLoYsJjUriqRT7Va0MakB2y0wXjefwmZLPiydROJqhs.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/17/17ubBLAfkO54mc-A02R2ogRUedXvfWmqjsuLK0OEd7c.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Hi/Hiby_OexSgdqWpbRuMkkn7me5stQxYhb2AiF0_D8YvI.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/ee/ee9ZqYM3D8GORlAyhQhVVtyNcEArBAXuuAcPhnfTNT8.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/Rj/Rjp79V0K33hwlYZFdbQLeNj0Kmdc3jd-cTC6ZQl2hJo.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/HK/HK3t2k4Q7tEkgAixLeNm7oZqRHLqTpbszTx3WLqf-i0.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/6y/6y7UVV-QqqzftgKOdutG3dYSVlwkOaNJ7D3ETIV95Xo.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/If/IfKe4puq7WujJ-Iwnfdjw3xvpDLufyvvdvBlkmdlWQA.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/vq/vqN3R_naEw4hNK0G7gwBFNdwzYjow6LCYzfy7AoazvM.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/44/44ZiHbdSVZTqnZb8hqLYCcdbGebW2qfU6jidZBRT_RI.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/9M/9M0u_otSLHz5c6Vs1SRbM0PKDBBKlD3BbwYNol0JsDY.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/G9/G98fhv0EwAPp8TYnTJGPozTTuefJL0MhAZhV691gPeA.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/ic/icopEXjX1s9awyHDRbpqg1E-_1VqM2hU0TAGS8sIb5A.cache': Permission denied
+rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/sprockets/v3.0/nc/ncXX-BWNsAZJFg-NFkAGoGmsoEhrF--i2n7GX9MJoUo.cache': Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:06:19 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [69d7d52f] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [69d7d52f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [69d7d52f] Finished in 2.471 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [cce75bb1] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [cce75bb1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [cce75bb1] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [a9dbe716] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [a9dbe716] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [a9dbe716] 	6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [a9dbe716] Finished in 1.480 seconds with exit status 0 (successful).
+  INFO [54604262] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [54604262] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [54604262] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [d04831cb] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [d04831cb] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [d04831cb] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [e5dc09c7] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [e5dc09c7] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [e5dc09c7] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [e5dc09c7] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [a206bb06] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [a206bb06] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [a206bb06] Finished in 0.498 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [a7ca142a] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [a7ca142a] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [a7ca142a] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [8eb4ef6b] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [8eb4ef6b] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8eb4ef6b] 	Fetching origin
+  INFO [8eb4ef6b] Finished in 1.495 seconds with exit status 0 (successful).
+ DEBUG [2ef13ee4] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [2ef13ee4] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [2ef13ee4] Finished in 0.499 seconds with exit status 0 (successful).
+  INFO [35c49bc1] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031160628 as reactor@64.15.185.105
+ DEBUG [35c49bc1] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031160628 )
+  INFO [35c49bc1] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [19c4b891] Running /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031160628 as reactor@64.15.185.105
+ DEBUG [19c4b891] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive master | tar -x -f - -C /data/ic/rampup/releases/20161031160628 )
+  INFO [19c4b891] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [2f107c2c] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [2f107c2c] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [2f107c2c] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [ee840548] Running /usr/bin/env git rev-list --max-count=1 master as reactor@64.15.185.105
+ DEBUG [ee840548] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ee840548] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [ee840548] Finished in 0.530 seconds with exit status 0 (successful).
+ DEBUG [887d5cbf] Running if test ! -d /data/ic/rampup/releases/20161031160628; then echo "Directory does not exist '/data/ic/rampup/releases/20161031160628'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [887d5cbf] Command: if test ! -d /data/ic/rampup/releases/20161031160628; then echo "Directory does not exist '/data/ic/rampup/releases/20161031160628'" 1>&2; false; fi
+ DEBUG [887d5cbf] Finished in 0.499 seconds with exit status 0 (successful).
+  INFO [512cffe5] Running /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION as reactor@64.15.185.105
+ DEBUG [512cffe5] Command: cd /data/ic/rampup/releases/20161031160628 && /usr/bin/env echo "848281b01953d8a1e4a77299ea7fde6e2c8bb3d5" >> REVISION
+  INFO [512cffe5] Finished in 0.545 seconds with exit status 0 (successful).
+  INFO [e802b9f3] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031160628 /data/ic/rampup/releases/current as reactor@64.15.185.105
+ DEBUG [e802b9f3] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031160628 /data/ic/rampup/releases/current
+  INFO [e802b9f3] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [c099d548] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@64.15.185.105
+ DEBUG [c099d548] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [c099d548] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG [0651133a] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [0651133a] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [0651133a] 	20161031135532	20161031140848	20161031145132	20161031160053	20161031160439
+20161031160628
+ DEBUG [0651133a] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 64.15.185.105
+  INFO [5cf31af3] Running /usr/bin/env rm -rf /data/ic/rampup/releases/20161031135532 as reactor@64.15.185.105
+ DEBUG [5cf31af3] Command: /usr/bin/env rm -rf /data/ic/rampup/releases/20161031135532
+  INFO [5cf31af3] Finished in 0.505 seconds with exit status 0 (successful).
+ DEBUG [cf494f26] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [cf494f26] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [cf494f26] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [e251c461] Running /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031160628 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@64.15.185.105
+ DEBUG [e251c461] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031160628 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [e251c461] Finished in 0.513 seconds with exit status 0 (successful).
