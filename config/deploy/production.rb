@@ -54,7 +54,7 @@
    roles: %w{web app db},
    ssh_options: {
      user: 'reactor', # overrides user setting above
-     keys: %w(/home/reactor/.ssh/id_rsa),
+     keys: %w(~/.ssh/reactor.pem),
      forward_agent: false,
      auth_methods: %w(publickey )
 
