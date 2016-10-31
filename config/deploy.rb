@@ -12,12 +12,12 @@ set :deploy_to, '/data/ic/rampup'
 
 # Default value for :scm is :git
 set :scm, :git
-set :branch, "branching_test"
+set :branch, "abranch"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 set :user, "reactor"
 set :use_sudo, false
-set :rails_env, "production"
+set :rails_env, "development"
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
@@ -27,7 +27,7 @@ set :deploy_via, :copy
 # set :pty, true
 # default_run_options[:pty] = true
 
-server "64.15.185.105", roles: [:app, :web, :db], :primary => true
+server "localhost", roles: [:app, :web, :db], :primary => true
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
 

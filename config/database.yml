@@ -13,8 +13,8 @@ development:
   adapter: mysql2
   encoding: utf8  
   database: rampup
-  username: sonar
-  password: 123qwe
+  username: reactor
+  password: iC0ntr0l
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
