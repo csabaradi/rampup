@@ -49,13 +49,13 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
- server 'localhost',
-   user: 'reactor',
-   roles: %w{web app db},
-   ssh_options: {
-     user: 'reactor', # overrides user setting above
-     keys: %w(~/.ssh/reactor.pem),
-     forward_agent: false,
-     auth_methods: %w(publickey)
-     # password: 'please use keys'
-   }
+server 'localhost',
+  user: 'reactor',
+  roles: %w{web app db},
+  ssh_options: {
+    user: 'reactor', # overrides user setting above
+    keys: %w(/home/reactor/.ssh/id_rsa),
+    forward_agent: false,
+    auth_methods: %w(publickey password)
+    # password: 'please use keys'
+  }
