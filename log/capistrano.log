@@ -676,3 +676,833 @@ rm: cannot remove `/data/ic/rampup/releases/20161028134839/tmp/cache/assets/spro
   INFO [e251c461] Running /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031160628 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@64.15.185.105
  DEBUG [e251c461] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch master (at 848281b01953d8a1e4a77299ea7fde6e2c8bb3d5) deployed as release 20161031160628 by razvan.lazea" >> /data/ic/rampup/revisions.log
   INFO [e251c461] Finished in 0.513 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:13:54 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0526daa7] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [0526daa7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0526daa7] Finished in 2.288 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [07a3041d] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [07a3041d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [07a3041d] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [f6c88b69] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [f6c88b69] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [f6c88b69] 	a297ad93aa0a5fee4d6f697ed617e053f964cfd8	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [f6c88b69] Finished in 2.783 seconds with exit status 0 (successful).
+  INFO [d3b347dc] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [d3b347dc] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [d3b347dc] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [3e757593] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [3e757593] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [3e757593] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [857c72b5] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [857c72b5] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [857c72b5] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [857c72b5] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [c189ba8f] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [c189ba8f] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [c189ba8f] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [b9d30176] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [b9d30176] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [b9d30176] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [a4f0abe6] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [a4f0abe6] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a4f0abe6] 	Fetching origin
+  INFO [a4f0abe6] Finished in 1.477 seconds with exit status 0 (successful).
+ DEBUG [79d91bf8] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [79d91bf8] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [79d91bf8] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [168c5ecb] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031161404 as reactor@64.15.185.105
+ DEBUG [168c5ecb] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031161404 )
+  INFO [168c5ecb] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [7cf81275] Running /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031161404 as reactor@64.15.185.105
+ DEBUG [7cf81275] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031161404 )
+ DEBUG [7cf81275] 	fatal: Not a valid object name
+ DEBUG [7cf81275] 	tar: 
+ DEBUG [7cf81275] 	This does not look like a tar archive
+ DEBUG [7cf81275] 	
+ DEBUG [7cf81275] 	tar: 
+ DEBUG [7cf81275] 	Exiting with failure status due to previous errors
+ DEBUG [7cf81275] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:18:09 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e0a743f1] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [e0a743f1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e0a743f1] Finished in 2.264 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [cdaaafe4] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [cdaaafe4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [cdaaafe4] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [56deef5d] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [56deef5d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [56deef5d] 	a297ad93aa0a5fee4d6f697ed617e053f964cfd8	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [56deef5d] Finished in 1.450 seconds with exit status 0 (successful).
+  INFO [040a9ae6] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [040a9ae6] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [040a9ae6] Finished in 0.494 seconds with exit status 0 (successful).
+ DEBUG [8334a5be] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [8334a5be] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [8334a5be] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [f8fc355b] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [f8fc355b] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [f8fc355b] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [f8fc355b] Finished in 0.493 seconds with exit status 0 (successful).
+ DEBUG [e37f5cd3] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [e37f5cd3] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [e37f5cd3] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [1f732e63] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [1f732e63] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [1f732e63] Finished in 0.496 seconds with exit status 0 (successful).
+  INFO [d2773d84] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [d2773d84] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d2773d84] 	Fetching origin
+  INFO [d2773d84] Finished in 1.493 seconds with exit status 0 (successful).
+ DEBUG [ce280834] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [ce280834] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [ce280834] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [191abab9] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031161818 as reactor@64.15.185.105
+ DEBUG [191abab9] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031161818 )
+  INFO [191abab9] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [0049304a] Running /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031161818 as reactor@64.15.185.105
+ DEBUG [0049304a] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031161818 )
+ DEBUG [0049304a] 	fatal: Not a valid object name
+ DEBUG [0049304a] 	tar: 
+ DEBUG [0049304a] 	This does not look like a tar archive
+ DEBUG [0049304a] 	
+ DEBUG [0049304a] 	tar: 
+ DEBUG [0049304a] 	Exiting with failure status due to previous errors
+ DEBUG [0049304a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:24:52 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6c5321ec] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [6c5321ec] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6c5321ec] Finished in 2.239 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [b6da98ea] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [b6da98ea] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [b6da98ea] Finished in 0.545 seconds with exit status 0 (successful).
+  INFO [21585979] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [21585979] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [21585979] 	60bb61fffe6b353857caa6c7f9ebd0117cbfc8ba	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [21585979] Finished in 1.503 seconds with exit status 0 (successful).
+  INFO [311f8b7d] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [311f8b7d] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [311f8b7d] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [3dc2f66d] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [3dc2f66d] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [3dc2f66d] Finished in 0.540 seconds with exit status 0 (successful).
+ DEBUG [327bc17a] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [327bc17a] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [327bc17a] 	848281b01953d8a1e4a77299ea7fde6e2c8bb3d5
+ DEBUG [327bc17a] Finished in 0.547 seconds with exit status 0 (successful).
+ DEBUG [f23e2fe8] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [f23e2fe8] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [f23e2fe8] Finished in 0.519 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [538c8921] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [538c8921] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [538c8921] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [ca215725] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [ca215725] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ca215725] 	Fetching origin
+  INFO [ca215725] Finished in 3.888 seconds with exit status 0 (successful).
+ DEBUG [abb32bb1] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [abb32bb1] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [abb32bb1] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [12dc3f1c] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031162501 as reactor@64.15.185.105
+ DEBUG [12dc3f1c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031162501 )
+  INFO [12dc3f1c] Finished in 0.532 seconds with exit status 0 (successful).
+  INFO [2ccf48af] Running /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031162501 as reactor@64.15.185.105
+ DEBUG [2ccf48af] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031162501 )
+ DEBUG [2ccf48af] 	fatal: Not a valid object name
+ DEBUG [2ccf48af] 	tar: 
+ DEBUG [2ccf48af] 	This does not look like a tar archive
+ DEBUG [2ccf48af] 	
+ DEBUG [2ccf48af] 	tar: 
+ DEBUG [2ccf48af] 	Exiting with failure status due to previous errors
+ DEBUG [2ccf48af] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:30:59 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [44126264] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [44126264] Command: /usr/bin/env mkdir -p /tmp
+  INFO [44126264] Finished in 2.258 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [a0749d2b] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [a0749d2b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [a0749d2b] Finished in 0.535 seconds with exit status 0 (successful).
+  INFO [bcfedc89] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [bcfedc89] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [bcfedc89] 	60bb61fffe6b353857caa6c7f9ebd0117cbfc8ba	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [bcfedc89] Finished in 1.580 seconds with exit status 0 (successful).
+  INFO [7167c083] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [7167c083] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [7167c083] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [dbae2bc5] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [dbae2bc5] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [dbae2bc5] Finished in 0.530 seconds with exit status 1 (failed).
+ DEBUG [9c36fec0] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [9c36fec0] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [9c36fec0] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [f0c3c7f9] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [f0c3c7f9] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [f0c3c7f9] Finished in 0.513 seconds with exit status 0 (successful).
+  INFO [c4553539] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [c4553539] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c4553539] 	Fetching origin
+  INFO [c4553539] Finished in 1.667 seconds with exit status 0 (successful).
+ DEBUG [35b37956] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [35b37956] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [35b37956] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [c6eb6d6d] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031163107 as reactor@64.15.185.105
+ DEBUG [c6eb6d6d] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031163107 )
+  INFO [c6eb6d6d] Finished in 0.532 seconds with exit status 0 (successful).
+  INFO [d9e47445] Running /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031163107 as reactor@64.15.185.105
+ DEBUG [d9e47445] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031163107 )
+ DEBUG [d9e47445] 	fatal: Not a valid object name
+ DEBUG [d9e47445] 	tar: 
+ DEBUG [d9e47445] 	This does not look like a tar archive
+ DEBUG [d9e47445] 	
+ DEBUG [d9e47445] 	tar: 
+ DEBUG [d9e47445] 	Exiting with failure status due to previous errors
+ DEBUG [d9e47445] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:32:32 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a6495ac0] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [a6495ac0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a6495ac0] Finished in 2.274 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [ded61a48] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [ded61a48] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [ded61a48] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [257e4cd0] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [257e4cd0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [257e4cd0] 	33b49f646884f16808cd55be1d60f9369a71300f	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [257e4cd0] Finished in 1.477 seconds with exit status 0 (successful).
+  INFO [0907268e] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [0907268e] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [0907268e] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [764a06ff] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [764a06ff] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [764a06ff] Finished in 0.512 seconds with exit status 1 (failed).
+ DEBUG [f820701f] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [f820701f] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [f820701f] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [7ab72915] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [7ab72915] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [7ab72915] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [c693b874] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [c693b874] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c693b874] 	Fetching origin
+  INFO [c693b874] Finished in 1.492 seconds with exit status 0 (successful).
+ DEBUG [a23c48f8] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [a23c48f8] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [a23c48f8] Finished in 0.505 seconds with exit status 0 (successful).
+  INFO [aed2b05c] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031163241 as reactor@64.15.185.105
+ DEBUG [aed2b05c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031163241 )
+  INFO [aed2b05c] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [39e50577] Running /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031163241 as reactor@64.15.185.105
+ DEBUG [39e50577] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031163241 )
+ DEBUG [39e50577] 	fatal: Not a valid object name
+ DEBUG [39e50577] 	tar: 
+ DEBUG [39e50577] 	This does not look like a tar archive
+ DEBUG [39e50577] 	
+ DEBUG [39e50577] 	tar: 
+ DEBUG [39e50577] 	Exiting with failure status due to previous errors
+ DEBUG [39e50577] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:48:33 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [adba4167] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [adba4167] Command: /usr/bin/env mkdir -p /tmp
+  INFO [adba4167] Finished in 2.275 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [1ed3a169] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [1ed3a169] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [1ed3a169] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO [4daa43a4] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [4daa43a4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [4daa43a4] 	f538a2e4a2a3c136539b00755005d7e3d005aa3e	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [4daa43a4] Finished in 1.471 seconds with exit status 0 (successful).
+  INFO [bcd3b3c4] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [bcd3b3c4] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [bcd3b3c4] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [cc047409] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [cc047409] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [cc047409] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG [bb8ca3df] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [bb8ca3df] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [bb8ca3df] 	21bf9139d990e0d928196a04b38dbde485cd2c87
+f538a2e4a2a3c136539b00755005d7e3d005aa3e
+ DEBUG [bb8ca3df] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [232ec4f5] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [232ec4f5] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [232ec4f5] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [1b21ebd0] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [1b21ebd0] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [1b21ebd0] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [2d225b94] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [2d225b94] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2d225b94] 	Fetching origin
+  INFO [2d225b94] Finished in 1.510 seconds with exit status 0 (successful).
+ DEBUG [757dc55f] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [757dc55f] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [757dc55f] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [f077a7cc] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031164842 as reactor@64.15.185.105
+ DEBUG [f077a7cc] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031164842 )
+  INFO [f077a7cc] Finished in 0.510 seconds with exit status 0 (successful).
+  INFO [fcf84c72] Running /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031164842 as reactor@64.15.185.105
+ DEBUG [fcf84c72] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive origin/branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031164842 )
+ DEBUG [fcf84c72] 	fatal: Not a valid object name
+ DEBUG [fcf84c72] 	tar: 
+ DEBUG [fcf84c72] 	This does not look like a tar archive
+ DEBUG [fcf84c72] 	
+ DEBUG [fcf84c72] 	tar: 
+ DEBUG [fcf84c72] 	Exiting with failure status due to previous errors
+ DEBUG [fcf84c72] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 18:49:17 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fa287fc0] Running /usr/bin/env mkdir -p /tmp as reactor@64.15.185.105
+ DEBUG [fa287fc0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fa287fc0] Finished in 2.378 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-production-razvan.lazea.sh 100.0%
+  INFO [cd0e6ab1] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh as reactor@64.15.185.105
+ DEBUG [cd0e6ab1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-production-razvan.lazea.sh
+  INFO [cd0e6ab1] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [1ecd4f20] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@64.15.185.105
+ DEBUG [1ecd4f20] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [1ecd4f20] 	f538a2e4a2a3c136539b00755005d7e3d005aa3e	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [1ecd4f20] Finished in 1.506 seconds with exit status 0 (successful).
+  INFO [e75e57b2] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [e75e57b2] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [e75e57b2] Finished in 0.517 seconds with exit status 0 (successful).
+ DEBUG [bd504d02] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@64.15.185.105
+ DEBUG [bd504d02] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [bd504d02] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [73c812bf] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@64.15.185.105
+ DEBUG [73c812bf] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [73c812bf] 	21bf9139d990e0d928196a04b38dbde485cd2c87
+f538a2e4a2a3c136539b00755005d7e3d005aa3e
+ DEBUG [73c812bf] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [42c6c032] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@64.15.185.105
+ DEBUG [42c6c032] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [42c6c032] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [f5641344] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [f5641344] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [f5641344] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [6fa6626a] Running /usr/bin/env git remote update --prune as reactor@64.15.185.105
+ DEBUG [6fa6626a] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6fa6626a] 	Fetching origin
+  INFO [6fa6626a] Finished in 1.612 seconds with exit status 0 (successful).
+ DEBUG [86a667d7] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [86a667d7] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [86a667d7] Finished in 0.492 seconds with exit status 0 (successful).
+  INFO [5d0ebb4b] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031164926 as reactor@64.15.185.105
+ DEBUG [5d0ebb4b] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031164926 )
+  INFO [5d0ebb4b] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [1346bc39] Running /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031164926 as reactor@64.15.185.105
+ DEBUG [1346bc39] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git archive branching_test | tar -x -f - -C /data/ic/rampup/releases/20161031164926 )
+  INFO [1346bc39] Finished in 0.531 seconds with exit status 0 (successful).
+ DEBUG [bc1e19f6] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [bc1e19f6] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [bc1e19f6] Finished in 0.493 seconds with exit status 0 (successful).
+ DEBUG [61911b76] Running /usr/bin/env git rev-list --max-count=1 branching_test as reactor@64.15.185.105
+ DEBUG [61911b76] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-production-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 branching_test )
+ DEBUG [61911b76] 	f538a2e4a2a3c136539b00755005d7e3d005aa3e
+ DEBUG [61911b76] Finished in 0.514 seconds with exit status 0 (successful).
+ DEBUG [0a01ce35] Running if test ! -d /data/ic/rampup/releases/20161031164926; then echo "Directory does not exist '/data/ic/rampup/releases/20161031164926'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [0a01ce35] Command: if test ! -d /data/ic/rampup/releases/20161031164926; then echo "Directory does not exist '/data/ic/rampup/releases/20161031164926'" 1>&2; false; fi
+ DEBUG [0a01ce35] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [82df7c5c] Running /usr/bin/env echo "f538a2e4a2a3c136539b00755005d7e3d005aa3e" >> REVISION as reactor@64.15.185.105
+ DEBUG [82df7c5c] Command: cd /data/ic/rampup/releases/20161031164926 && /usr/bin/env echo "f538a2e4a2a3c136539b00755005d7e3d005aa3e" >> REVISION
+  INFO [82df7c5c] Finished in 0.523 seconds with exit status 0 (successful).
+  INFO [e4b04fb1] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031164926 /data/ic/rampup/releases/current as reactor@64.15.185.105
+ DEBUG [e4b04fb1] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031164926 /data/ic/rampup/releases/current
+  INFO [e4b04fb1] Finished in 0.492 seconds with exit status 0 (successful).
+  INFO [3e3fab88] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@64.15.185.105
+ DEBUG [3e3fab88] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [3e3fab88] Finished in 0.499 seconds with exit status 0 (successful).
+ DEBUG [45cb7e9a] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@64.15.185.105
+ DEBUG [45cb7e9a] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [45cb7e9a] 	20161031164808	20161031164842	20161031164926
+ DEBUG [45cb7e9a] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [a47a5fd2] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@64.15.185.105
+ DEBUG [a47a5fd2] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [a47a5fd2] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [74a9e30a] Running /usr/bin/env echo "Branch branching_test (at f538a2e4a2a3c136539b00755005d7e3d005aa3e) deployed as release 20161031164926 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@64.15.185.105
+ DEBUG [74a9e30a] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch branching_test (at f538a2e4a2a3c136539b00755005d7e3d005aa3e) deployed as release 20161031164926 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [74a9e30a] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:08:04 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d718376e] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [d718376e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d718376e] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:14:13 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8b3ec8c7] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [8b3ec8c7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8b3ec8c7] Finished in 0.106 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [c608c389] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [c608c389] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [c608c389] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [0a81ad33] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [0a81ad33] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [0a81ad33] 	cc8872280db68205df6fb666df80f7e456644017	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [0a81ad33] Finished in 1.440 seconds with exit status 0 (successful).
+  INFO [dbd5acb8] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [dbd5acb8] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [dbd5acb8] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [16de702b] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@localhost
+ DEBUG [16de702b] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [16de702b] Finished in 0.002 seconds with exit status 1 (failed).
+ DEBUG [4ae76c45] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@localhost
+ DEBUG [4ae76c45] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [4ae76c45] Finished in 0.002 seconds with exit status 1 (failed).
+ DEBUG [448cb86d] Running if test ! -d /data/ic/rampup; then echo "Directory does not exist '/data/ic/rampup'" 1>&2; false; fi as reactor@localhost
+ DEBUG [448cb86d] Command: if test ! -d /data/ic/rampup; then echo "Directory does not exist '/data/ic/rampup'" 1>&2; false; fi
+ DEBUG [448cb86d] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [fe2f161c] Running /usr/bin/env git clone --mirror git@github.com:csabaradi/rampup.git /data/ic/rampup/repo as reactor@localhost
+ DEBUG [fe2f161c] Command: cd /data/ic/rampup && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git clone --mirror git@github.com:csabaradi/rampup.git /data/ic/rampup/repo )
+ DEBUG [fe2f161c] 	Cloning into bare repository '/data/ic/rampup/repo'...
+  INFO [fe2f161c] Finished in 2.060 seconds with exit status 0 (successful).
+ DEBUG [fa10738a] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [fa10738a] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [fa10738a] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [2b89891b] Running /usr/bin/env git remote update --prune as reactor@localhost
+ DEBUG [2b89891b] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2b89891b] 	Fetching origin
+  INFO [2b89891b] Finished in 1.479 seconds with exit status 0 (successful).
+ DEBUG [d57cf4b6] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [d57cf4b6] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [d57cf4b6] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [c45b3cfe] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031171415 as reactor@localhost
+ DEBUG [c45b3cfe] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031171415 )
+  INFO [c45b3cfe] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [66b7ac3c] Running /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031171415 as reactor@localhost
+ DEBUG [66b7ac3c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031171415 )
+  INFO [66b7ac3c] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [e738b3ce] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [e738b3ce] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [e738b3ce] Finished in 0.002 seconds with exit status 0 (successful).
+ DEBUG [5c1265b2] Running /usr/bin/env git rev-list --max-count=1 abranch as reactor@localhost
+ DEBUG [5c1265b2] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 abranch )
+ DEBUG [5c1265b2] 	cc8872280db68205df6fb666df80f7e456644017
+ DEBUG [5c1265b2] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [a392c998] Running if test ! -d /data/ic/rampup/releases/20161031171415; then echo "Directory does not exist '/data/ic/rampup/releases/20161031171415'" 1>&2; false; fi as reactor@localhost
+ DEBUG [a392c998] Command: if test ! -d /data/ic/rampup/releases/20161031171415; then echo "Directory does not exist '/data/ic/rampup/releases/20161031171415'" 1>&2; false; fi
+ DEBUG [a392c998] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [7ff5dbf7] Running /usr/bin/env echo "cc8872280db68205df6fb666df80f7e456644017" >> REVISION as reactor@localhost
+ DEBUG [7ff5dbf7] Command: cd /data/ic/rampup/releases/20161031171415 && /usr/bin/env echo "cc8872280db68205df6fb666df80f7e456644017" >> REVISION
+  INFO [7ff5dbf7] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [afe8c9be] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031171415 /data/ic/rampup/releases/current as reactor@localhost
+ DEBUG [afe8c9be] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031171415 /data/ic/rampup/releases/current
+  INFO [afe8c9be] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [198d9c83] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@localhost
+ DEBUG [198d9c83] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [198d9c83] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [6ea2edcd] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@localhost
+ DEBUG [6ea2edcd] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [6ea2edcd] 	20161031171415
+ DEBUG [6ea2edcd] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [a1760eaf] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@localhost
+ DEBUG [a1760eaf] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [a1760eaf] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b39c3f52] Running /usr/bin/env echo "Branch abranch (at cc8872280db68205df6fb666df80f7e456644017) deployed as release 20161031171415 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@localhost
+ DEBUG [b39c3f52] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch abranch (at cc8872280db68205df6fb666df80f7e456644017) deployed as release 20161031171415 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [b39c3f52] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:19:06 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [05e33ec2] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [05e33ec2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [05e33ec2] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [654c740f] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [654c740f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [654c740f] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [d322c17f] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [d322c17f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [d322c17f] 	cc8872280db68205df6fb666df80f7e456644017	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [d322c17f] Finished in 1.580 seconds with exit status 0 (successful).
+  INFO [69f020ed] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [69f020ed] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+ DEBUG [69f020ed] 	mkdir: cannot create directory ‘/data/ic/rampup’
+ DEBUG [69f020ed] 	: Permission denied
+ DEBUG [69f020ed] 	mkdir: cannot create directory ‘/data/ic/rampup’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:20:43 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [06f9bf07] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [06f9bf07] Command: /usr/bin/env mkdir -p /tmp
+  INFO [06f9bf07] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [5e3f4be1] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [5e3f4be1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [5e3f4be1] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [104407be] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [104407be] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [104407be] 	cc8872280db68205df6fb666df80f7e456644017	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [104407be] Finished in 1.492 seconds with exit status 0 (successful).
+  INFO [165b0d90] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [165b0d90] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [165b0d90] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [b4ba09ae] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@localhost
+ DEBUG [b4ba09ae] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [b4ba09ae] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [9330e9bd] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@localhost
+ DEBUG [9330e9bd] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [9330e9bd] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [c973e202] Running if test ! -d /data/ic/rampup; then echo "Directory does not exist '/data/ic/rampup'" 1>&2; false; fi as reactor@localhost
+ DEBUG [c973e202] Command: if test ! -d /data/ic/rampup; then echo "Directory does not exist '/data/ic/rampup'" 1>&2; false; fi
+ DEBUG [c973e202] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a63cb961] Running /usr/bin/env git clone --mirror git@github.com:csabaradi/rampup.git /data/ic/rampup/repo as reactor@localhost
+ DEBUG [a63cb961] Command: cd /data/ic/rampup && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git clone --mirror git@github.com:csabaradi/rampup.git /data/ic/rampup/repo )
+ DEBUG [a63cb961] 	Cloning into bare repository '/data/ic/rampup/repo'...
+  INFO [a63cb961] Finished in 2.032 seconds with exit status 0 (successful).
+ DEBUG [9236a035] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [9236a035] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [9236a035] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [7805fe82] Running /usr/bin/env git remote update --prune as reactor@localhost
+ DEBUG [7805fe82] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7805fe82] 	Fetching origin
+  INFO [7805fe82] Finished in 1.622 seconds with exit status 0 (successful).
+ DEBUG [b4e0c003] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [b4e0c003] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [b4e0c003] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4cbebd9c] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031172045 as reactor@localhost
+ DEBUG [4cbebd9c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031172045 )
+  INFO [4cbebd9c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [0129e33c] Running /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031172045 as reactor@localhost
+ DEBUG [0129e33c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031172045 )
+  INFO [0129e33c] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [0862aac3] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [0862aac3] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [0862aac3] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [3d8898bc] Running /usr/bin/env git rev-list --max-count=1 abranch as reactor@localhost
+ DEBUG [3d8898bc] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 abranch )
+ DEBUG [3d8898bc] 	cc8872280db68205df6fb666df80f7e456644017
+ DEBUG [3d8898bc] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [c944702d] Running if test ! -d /data/ic/rampup/releases/20161031172045; then echo "Directory does not exist '/data/ic/rampup/releases/20161031172045'" 1>&2; false; fi as reactor@localhost
+ DEBUG [c944702d] Command: if test ! -d /data/ic/rampup/releases/20161031172045; then echo "Directory does not exist '/data/ic/rampup/releases/20161031172045'" 1>&2; false; fi
+ DEBUG [c944702d] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [ff6352bb] Running /usr/bin/env echo "cc8872280db68205df6fb666df80f7e456644017" >> REVISION as reactor@localhost
+ DEBUG [ff6352bb] Command: cd /data/ic/rampup/releases/20161031172045 && /usr/bin/env echo "cc8872280db68205df6fb666df80f7e456644017" >> REVISION
+  INFO [ff6352bb] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [4e3e88c9] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031172045 /data/ic/rampup/releases/current as reactor@localhost
+ DEBUG [4e3e88c9] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031172045 /data/ic/rampup/releases/current
+  INFO [4e3e88c9] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [6387f3b7] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@localhost
+ DEBUG [6387f3b7] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [6387f3b7] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [1044d49a] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@localhost
+ DEBUG [1044d49a] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [1044d49a] 	20161031172045
+ DEBUG [1044d49a] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [895030b0] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@localhost
+ DEBUG [895030b0] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [895030b0] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [d5b249b4] Running /usr/bin/env echo "Branch abranch (at cc8872280db68205df6fb666df80f7e456644017) deployed as release 20161031172045 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@localhost
+ DEBUG [d5b249b4] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch abranch (at cc8872280db68205df6fb666df80f7e456644017) deployed as release 20161031172045 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [d5b249b4] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:24:41 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d259f021] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [d259f021] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:25:57 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a12fad49] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [a12fad49] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-31 19:26:34 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7bef2a96] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [7bef2a96] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7bef2a96] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [82ec53b6] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [82ec53b6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [82ec53b6] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [faaed1af] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [faaed1af] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [faaed1af] 	89623cc0a51222ea1fb75693e59fc75a048fbb87	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [faaed1af] Finished in 1.837 seconds with exit status 0 (successful).
+  INFO [4682e33e] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [4682e33e] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [4682e33e] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [cd882f8c] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@localhost
+ DEBUG [cd882f8c] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [cd882f8c] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [858f9a71] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@localhost
+ DEBUG [858f9a71] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [858f9a71] 	21bf9139d990e0d928196a04b38dbde485cd2c87
+cc8872280db68205df6fb666df80f7e456644017
+ DEBUG [858f9a71] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [1aa2cb48] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@localhost
+ DEBUG [1aa2cb48] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [1aa2cb48] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [9ef065dc] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [9ef065dc] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [9ef065dc] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c1b13d19] Running /usr/bin/env git remote update --prune as reactor@localhost
+ DEBUG [c1b13d19] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c1b13d19] 	Fetching origin
+ DEBUG [c1b13d19] 	From github.com:csabaradi/rampup
+   cc88722..89623cc  abranch    -> abranch
+  INFO [c1b13d19] Finished in 2.017 seconds with exit status 0 (successful).
+ DEBUG [6b9d1da1] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [6b9d1da1] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [6b9d1da1] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [dbff5217] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031172637 as reactor@localhost
+ DEBUG [dbff5217] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161031172637 )
+  INFO [dbff5217] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [32dc3dc8] Running /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031172637 as reactor@localhost
+ DEBUG [32dc3dc8] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161031172637 )
+  INFO [32dc3dc8] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [0259b3de] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [0259b3de] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [0259b3de] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [76caa0c9] Running /usr/bin/env git rev-list --max-count=1 abranch as reactor@localhost
+ DEBUG [76caa0c9] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 abranch )
+ DEBUG [76caa0c9] 	89623cc0a51222ea1fb75693e59fc75a048fbb87
+ DEBUG [76caa0c9] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [9c6d2961] Running if test ! -d /data/ic/rampup/releases/20161031172637; then echo "Directory does not exist '/data/ic/rampup/releases/20161031172637'" 1>&2; false; fi as reactor@localhost
+ DEBUG [9c6d2961] Command: if test ! -d /data/ic/rampup/releases/20161031172637; then echo "Directory does not exist '/data/ic/rampup/releases/20161031172637'" 1>&2; false; fi
+ DEBUG [9c6d2961] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [3fca9e9a] Running /usr/bin/env echo "89623cc0a51222ea1fb75693e59fc75a048fbb87" >> REVISION as reactor@localhost
+ DEBUG [3fca9e9a] Command: cd /data/ic/rampup/releases/20161031172637 && /usr/bin/env echo "89623cc0a51222ea1fb75693e59fc75a048fbb87" >> REVISION
+  INFO [3fca9e9a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [67f9f999] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161031172637 /data/ic/rampup/releases/current as reactor@localhost
+ DEBUG [67f9f999] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161031172637 /data/ic/rampup/releases/current
+  INFO [67f9f999] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [483e8f9d] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@localhost
+ DEBUG [483e8f9d] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [483e8f9d] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [e8750500] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@localhost
+ DEBUG [e8750500] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [e8750500] 	20161031172045	20161031172637
+ DEBUG [e8750500] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [03e5f60c] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@localhost
+ DEBUG [03e5f60c] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [03e5f60c] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [20e60523] Running /usr/bin/env echo "Branch abranch (at 89623cc0a51222ea1fb75693e59fc75a048fbb87) deployed as release 20161031172637 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@localhost
+ DEBUG [20e60523] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch abranch (at 89623cc0a51222ea1fb75693e59fc75a048fbb87) deployed as release 20161031172637 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [20e60523] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 09:30:05 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [19b2c495] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [19b2c495] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 09:31:01 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1aa240c5] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [1aa240c5] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1aa240c5] Finished in 8.506 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [938a4745] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [938a4745] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [938a4745] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [970189eb] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [970189eb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [970189eb] 	fa2628f71742ea7c6662b30063c6499b307d881d	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [970189eb] Finished in 1.405 seconds with exit status 0 (successful).
+  INFO [b1147562] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [b1147562] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [b1147562] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [6d8ac617] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@localhost
+ DEBUG [6d8ac617] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [6d8ac617] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [d4a282d3] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@localhost
+ DEBUG [d4a282d3] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [d4a282d3] 	21bf9139d990e0d928196a04b38dbde485cd2c87
+89623cc0a51222ea1fb75693e59fc75a048fbb87
+ DEBUG [d4a282d3] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [7f34254f] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@localhost
+ DEBUG [7f34254f] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [7f34254f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [a2ae4e49] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [a2ae4e49] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [a2ae4e49] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [8f899c0d] Running /usr/bin/env git remote update --prune as reactor@localhost
+ DEBUG [8f899c0d] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8f899c0d] 	Fetching origin
+ DEBUG [8f899c0d] 	From github.com:csabaradi/rampup
+   89623cc..fa2628f  abranch    -> abranch
+  INFO [8f899c0d] Finished in 1.650 seconds with exit status 0 (successful).
+ DEBUG [985eb819] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [985eb819] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [985eb819] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [209638d2] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161101073123 as reactor@localhost
+ DEBUG [209638d2] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161101073123 )
+  INFO [209638d2] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [55409f6c] Running /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161101073123 as reactor@localhost
+ DEBUG [55409f6c] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161101073123 )
+  INFO [55409f6c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [d07ac63e] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [d07ac63e] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [d07ac63e] Finished in 0.002 seconds with exit status 0 (successful).
+ DEBUG [ece40603] Running /usr/bin/env git rev-list --max-count=1 abranch as reactor@localhost
+ DEBUG [ece40603] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 abranch )
+ DEBUG [ece40603] 	fa2628f71742ea7c6662b30063c6499b307d881d
+ DEBUG [ece40603] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [7f21d0b8] Running if test ! -d /data/ic/rampup/releases/20161101073123; then echo "Directory does not exist '/data/ic/rampup/releases/20161101073123'" 1>&2; false; fi as reactor@localhost
+ DEBUG [7f21d0b8] Command: if test ! -d /data/ic/rampup/releases/20161101073123; then echo "Directory does not exist '/data/ic/rampup/releases/20161101073123'" 1>&2; false; fi
+ DEBUG [7f21d0b8] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [53e68860] Running /usr/bin/env echo "fa2628f71742ea7c6662b30063c6499b307d881d" >> REVISION as reactor@localhost
+ DEBUG [53e68860] Command: cd /data/ic/rampup/releases/20161101073123 && /usr/bin/env echo "fa2628f71742ea7c6662b30063c6499b307d881d" >> REVISION
+  INFO [53e68860] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [fdd7129a] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161101073123 /data/ic/rampup/releases/current as reactor@localhost
+ DEBUG [fdd7129a] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161101073123 /data/ic/rampup/releases/current
+  INFO [fdd7129a] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [d33d52c9] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@localhost
+ DEBUG [d33d52c9] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [d33d52c9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [76a1d85f] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@localhost
+ DEBUG [76a1d85f] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [76a1d85f] 	20161031172045	20161031172637	20161101073123
+ DEBUG [76a1d85f] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [a658790c] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@localhost
+ DEBUG [a658790c] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [a658790c] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [422dc660] Running /usr/bin/env echo "Branch abranch (at fa2628f71742ea7c6662b30063c6499b307d881d) deployed as release 20161101073123 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@localhost
+ DEBUG [422dc660] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch abranch (at fa2628f71742ea7c6662b30063c6499b307d881d) deployed as release 20161101073123 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [422dc660] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 09:36:03 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 13:23:02 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 13:26:14 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 14:20:36 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4ec83981] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [4ec83981] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-11-01 14:21:29 +0200 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f7150907] Running /usr/bin/env mkdir -p /tmp as reactor@localhost
+ DEBUG [f7150907] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f7150907] Finished in 12.713 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rampup-development-razvan.lazea.sh 100.0%
+  INFO [2498c531] Running /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh as reactor@localhost
+ DEBUG [2498c531] Command: /usr/bin/env chmod 700 /tmp/git-ssh-rampup-development-razvan.lazea.sh
+  INFO [2498c531] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b9664005] Running /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git as reactor@localhost
+ DEBUG [b9664005] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git ls-remote --heads git@github.com:csabaradi/rampup.git )
+ DEBUG [b9664005] 	fa2628f71742ea7c6662b30063c6499b307d881d	refs/heads/abranch
+302157082eea8a5d6685f53f1284396e0e887e93	refs/heads/branching_test
+6435cb31c1575129e7c169e6069755703d8d4cb4	refs/heads/master
+  INFO [b9664005] Finished in 1.499 seconds with exit status 0 (successful).
+  INFO [f1b2729d] Running /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases as reactor@localhost
+ DEBUG [f1b2729d] Command: /usr/bin/env mkdir -p /data/ic/rampup/shared /data/ic/rampup/releases
+  INFO [f1b2729d] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [27a1557a] Running [ -f /data/ic/rampup/current/REVISION ] as reactor@localhost
+ DEBUG [27a1557a] Command: [ -f /data/ic/rampup/current/REVISION ]
+ DEBUG [27a1557a] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [51b4c33d] Running /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null as reactor@localhost
+ DEBUG [51b4c33d] Command: /usr/bin/env cat /data/ic/rampup/current/REVISION 2>/dev/null
+ DEBUG [51b4c33d] 	21bf9139d990e0d928196a04b38dbde485cd2c87
+fa2628f71742ea7c6662b30063c6499b307d881d
+ DEBUG [51b4c33d] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [0dee2cef] Running [ -f /data/ic/rampup/repo/HEAD ] as reactor@localhost
+ DEBUG [0dee2cef] Command: [ -f /data/ic/rampup/repo/HEAD ]
+ DEBUG [0dee2cef] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/ic/rampup/repo
+ DEBUG [4c793e31] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [4c793e31] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [4c793e31] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [d9e2d746] Running /usr/bin/env git remote update --prune as reactor@localhost
+ DEBUG [d9e2d746] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d9e2d746] 	Fetching origin
+  INFO [d9e2d746] Finished in 1.463 seconds with exit status 0 (successful).
+ DEBUG [453d7541] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [453d7541] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [453d7541] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [743ba413] Running /usr/bin/env mkdir -p /data/ic/rampup/releases/20161101122147 as reactor@localhost
+ DEBUG [743ba413] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env mkdir -p /data/ic/rampup/releases/20161101122147 )
+  INFO [743ba413] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [38f4e176] Running /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161101122147 as reactor@localhost
+ DEBUG [38f4e176] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git archive abranch | tar -x -f - -C /data/ic/rampup/releases/20161101122147 )
+  INFO [38f4e176] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [d4d57a02] Running if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi as reactor@localhost
+ DEBUG [d4d57a02] Command: if test ! -d /data/ic/rampup/repo; then echo "Directory does not exist '/data/ic/rampup/repo'" 1>&2; false; fi
+ DEBUG [d4d57a02] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [ab53bb13] Running /usr/bin/env git rev-list --max-count=1 abranch as reactor@localhost
+ DEBUG [ab53bb13] Command: cd /data/ic/rampup/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rampup-development-razvan.lazea.sh" ; /usr/bin/env git rev-list --max-count=1 abranch )
+ DEBUG [ab53bb13] 	fa2628f71742ea7c6662b30063c6499b307d881d
+ DEBUG [ab53bb13] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [f635a656] Running if test ! -d /data/ic/rampup/releases/20161101122147; then echo "Directory does not exist '/data/ic/rampup/releases/20161101122147'" 1>&2; false; fi as reactor@localhost
+ DEBUG [f635a656] Command: if test ! -d /data/ic/rampup/releases/20161101122147; then echo "Directory does not exist '/data/ic/rampup/releases/20161101122147'" 1>&2; false; fi
+ DEBUG [f635a656] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [83301099] Running /usr/bin/env echo "fa2628f71742ea7c6662b30063c6499b307d881d" >> REVISION as reactor@localhost
+ DEBUG [83301099] Command: cd /data/ic/rampup/releases/20161101122147 && /usr/bin/env echo "fa2628f71742ea7c6662b30063c6499b307d881d" >> REVISION
+  INFO [83301099] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [ca629cff] Running /usr/bin/env ln -s /data/ic/rampup/releases/20161101122147 /data/ic/rampup/releases/current as reactor@localhost
+ DEBUG [ca629cff] Command: /usr/bin/env ln -s /data/ic/rampup/releases/20161101122147 /data/ic/rampup/releases/current
+  INFO [ca629cff] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [62e093bd] Running /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup as reactor@localhost
+ DEBUG [62e093bd] Command: /usr/bin/env mv /data/ic/rampup/releases/current /data/ic/rampup
+  INFO [62e093bd] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [4291f959] Running /usr/bin/env ls -xtr /data/ic/rampup/releases as reactor@localhost
+ DEBUG [4291f959] Command: /usr/bin/env ls -xtr /data/ic/rampup/releases
+ DEBUG [4291f959] 	20161031172045	20161031172637	20161101073123	20161101122147
+ DEBUG [4291f959] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [54da72a4] Running if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi as reactor@localhost
+ DEBUG [54da72a4] Command: if test ! -d /data/ic/rampup/releases; then echo "Directory does not exist '/data/ic/rampup/releases'" 1>&2; false; fi
+ DEBUG [54da72a4] Finished in 0.002 seconds with exit status 0 (successful).
+  INFO [2559f12e] Running /usr/bin/env echo "Branch abranch (at fa2628f71742ea7c6662b30063c6499b307d881d) deployed as release 20161101122147 by razvan.lazea" >> /data/ic/rampup/revisions.log as reactor@localhost
+ DEBUG [2559f12e] Command: cd /data/ic/rampup/releases && /usr/bin/env echo "Branch abranch (at fa2628f71742ea7c6662b30063c6499b307d881d) deployed as release 20161101122147 by razvan.lazea" >> /data/ic/rampup/revisions.log
+  INFO [2559f12e] Finished in 0.003 seconds with exit status 0 (successful).
