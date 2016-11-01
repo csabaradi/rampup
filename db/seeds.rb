@@ -21,6 +21,8 @@ Role.create!([{
 key = Blowfish::Key.generate('123456')
 pass = "test1234"
 User.create!([{
+		firstname: "admin",
+		lastname: "admin",
 		username: "admin",
 		email: "admin@admin.com",
 		password: Blowfish.encrypt(pass, key),
