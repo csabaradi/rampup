@@ -27,7 +27,7 @@ set :deploy_via, :copy
 # set :pty, true
 # default_run_options[:pty] = true
 
-server "localhost", roles: [:app, :web, :db], :primary => true
+# server "", roles: [:app, :web, :db], :primary => true
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
