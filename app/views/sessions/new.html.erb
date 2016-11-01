@@ -5,7 +5,6 @@
 			<% flash.each do |key, value| %>
 			<%= content_tag :div, value, class: "alert alert-info existing" %>
 			<%end%><br/>
-			<%=f.label "Uuuser login"%>
 			<%=f.text_field :username, :class => "login_field" %> <br/>
 			<%=f.password_field :password, :class => "login_field" %><br/>
 			<%=f.submit "Login", :id => "login_button" %>
