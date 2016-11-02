@@ -18,7 +18,11 @@ class User < ApplicationRecord
 	private
 
 	def set_role
-		self.role = Role.find_by_name("user")
+		if self.username == "admin"
+			self.role = Role.find_by_name("superadmin")
+		else
+			self.role = Role.find_by_name("user")
+		end
 	end
 
 	def set_password

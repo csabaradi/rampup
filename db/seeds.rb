@@ -18,13 +18,11 @@ Role.create!([{
 		name: "superadmin"
 	}
 	])
-key = Blowfish::Key.generate('123456')
-pass = "test1234"
 User.create!([{
 		firstname: "admin",
 		lastname: "admin",
 		username: "admin",
 		email: "admin@admin.com",
-		password: Blowfish.encrypt(pass, key),
+		password: "test1234",
 		role: Role.find_by_name("superadmin")
 	}])
